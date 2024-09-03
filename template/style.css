@@ -1,0 +1,126 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.neumorphic {
+    background: #2a2a2a;
+    box-shadow: 8px 8px 16px #151515, -8px -8px 16px #3f3f3f;
+    border-radius: 20px;
+}
+
+.neumorphic-inset {
+    background: #2a2a2a;
+    box-shadow: inset 6px 6px 12px #151515, inset -6px -6px 12px #3f3f3f;
+    border-radius: 20px;
+}
+
+.result-list {
+    margin-top: 20px;
+}
+
+.result-item {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #3a3a3a;
+    box-shadow: 3px 3px 6px #151515, -3px -3px 6px #3f3f3f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.result-label {
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.bar-container {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    box-shadow: inset 1px 1px 3px #cccccc, inset -1px -1px 3px #aaaaaa;
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #ff0000, #ff9900);
+    transition: width 0.5s ease-in-out;
+}
+
+.result-percentage {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+#fileInput {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    background-color: #404040;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #505050;
+}
+
+#attributionImage {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#loadingIndicator {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 8px solid #f3f3f3;
+    /* Light grey */
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    /* Blue */
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+#errorMessage {
+    display: none;
+    color: #ff0000;
+    /* Red */
+    margin-top: 10px;
+}
+
+#topPathology {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
